@@ -12,27 +12,28 @@ public class Main {
         UserRepository mysqlRepository = new MySQLUserRepository();
         UserService mysqlService = new UserService(mysqlRepository);
         mysqlService.registerUser("Sofiya");
+        mysqlService.showUsers();
 
         System.out.println();
 
         UserRepository mongoRepository = new MongoUserRepository();
         UserService mongoService = new UserService(mongoRepository);
         mongoService.registerUser("Yevgenii");
+        mongoService.showUsers();
 
         System.out.println();
 
         UserRepository mockRepository = new MockUserRepository();
         UserService mockService = new UserService(mockRepository);
         mockService.registerUser("Darya");
+        mockService.showUsers();
 
         System.out.println();
 
         UserRepository repository = new PostgresUserRepository();
         UserService service = new UserService(repository);
-
         service.registerUser("Lina");
         service.registerUser("Adel");
-
         service.showUsers();
     }
 }

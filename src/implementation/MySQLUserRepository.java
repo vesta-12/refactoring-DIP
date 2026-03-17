@@ -11,7 +11,8 @@ public class MySQLUserRepository implements UserRepository {
 
     @Override
     public void saveUser(User user) {
-        System.out.println(user.getName() + " " + "saved to MySQL");
+        users.add(user);
+        System.out.println(user.getName() + " " + "saved to mySQL");
     }
 
     @Override

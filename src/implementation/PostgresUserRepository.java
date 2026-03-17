@@ -12,7 +12,7 @@ public class PostgresUserRepository implements UserRepository {
     @Override
     public void saveUser(User user) {
         users.add(user);
-        System.out.println(user.getName() + " " + "saved to Postgres");
+        System.out.println(user.getName() + " " + "saved to postgres");
     }
 
     @Override
