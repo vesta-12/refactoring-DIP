@@ -1,5 +1,6 @@
 package app;
 
+import implementation.PostgresUserRepository;
 import repository.UserRepository;
 import implementation.MockUserRepository;
 import implementation.MongoUserRepository;
@@ -23,5 +24,15 @@ public class Main {
         UserRepository mockRepository = new MockUserRepository();
         UserService mockService = new UserService(mockRepository);
         mockService.registerUser("Darya");
+
+        System.out.println();
+
+        UserRepository repository = new PostgresUserRepository();
+        UserService service = new UserService(repository);
+
+        service.registerUser("Lina");
+        service.registerUser("Adel");
+
+        service.showUsers();
     }
 }

@@ -6,17 +6,17 @@ import repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySQLUserRepository implements UserRepository {
+public class PostgresUserRepository implements UserRepository {
     private final List<User> users = new ArrayList<>();
 
     @Override
     public void saveUser(User user) {
-        System.out.println(user.getName() + " " + "saved to MySQL");
+        users.add(user);
+        System.out.println(user.getName() + " " + "saved to Postgres");
     }
 
     @Override
     public List<User> getUsers() {
         return new ArrayList<>(users);
     }
-
 }
