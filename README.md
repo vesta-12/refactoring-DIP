@@ -1,4 +1,4 @@
-# dependency inversion principle lab
+## dependency inversion principle lab
 
 this project shows how to refactor code using the dependency inversion principle.
 
